@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo dos pontos</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/components/startScreen.css">
+</head>
+<body>
+    <main>
+        <div class="container-startScreen">
+            <div class="startScreen">
+                <form class="form" action="">
+                    <label for="player1" class="labelPlayers">Nome Jogador 1</label>
+                    <input type="text" class="inputPlayers" id="player1" name="player1">
+                    <label for="player2" class="labelPlayers">Nome Jogador 2</label>
+                    <input type="text" class="inputPlayers" id="player2" name="player2">
+                    <input type="submit" class="btn-play" value="Jogar">
+                </form>
+            </div>
+        </div>
+
+        <aside class="container-players">
+        </aside>
+
+        <div class="container-game">
+            <canvas class="game"></canvas>
+        </div>
+        
+        <aside class="container-players">      
+        </aside>
+    </main>
+
+    <script src="JavaScript/startScreen.js"></script>
+    <script src="JavaScript/game/resizeCanvas.js"></script>
+    <script src="JavaScript/game/createGame.js"></script>
+    <script src="JavaScript/game/playGame.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+main{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+}
+
+.container-game{
+    display: flex;
+    justify-content: center;
+}
+
+.game{
+    margin-top: 2vh;
+    width: 70vw;
+    height: 95vh;
+    background-color: white;
+}
+
+.container-players{
+    width: 50vw;
+    height: 100vh;
+    background-color: blueviolet;
+}
