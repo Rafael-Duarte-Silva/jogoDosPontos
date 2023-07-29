@@ -13,24 +13,33 @@
     <main>
         <div class="container-startScreen">
             <div class="startScreen">
-                <form class="form" action="">
-                    <label for="player1" class="labelPlayers">Nome Jogador 1</label>
-                    <input type="text" class="inputPlayers" id="player1" name="player1">
-                    <label for="player2" class="labelPlayers">Nome Jogador 2</label>
-                    <input type="text" class="inputPlayers" id="player2" name="player2">
+                <form 
+                name="form" 
+                class="form" 
+                action="" 
+                onsubmit="return validateForm()"
+                autocomplete="off"
+                spellcheck="false"
+                >
+                    <label for="player1" class="labelPlayers">Jogador 1</label>
+                    <input type="text" class="inputPlayers" id="player1" name="player1" placeholder="Name">
+                    <label for="player2" class="labelPlayers">Jogador 2</label>
+                    <input type="text" class="inputPlayers" id="player2" name="player2" placeholder="Name">
                     <input type="submit" class="btn-play" value="Jogar">
                 </form>
             </div>
         </div>
 
-        <aside class="container-players">
+        <aside class="container-players container-player1">
+            <progress class="cooldown" value="32" max="100"> 32% </progress>
         </aside>
 
         <div class="container-game">
             <canvas class="game"></canvas>
         </div>
         
-        <aside class="container-players">      
+        <aside class="container-players container-player2">
+            <progress class="cooldown" value="32" max="100"> 32% </progress>      
         </aside>
     </main>
 

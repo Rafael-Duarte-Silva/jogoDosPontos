@@ -20,5 +20,19 @@ main{
 .container-players{
     width: 50vw;
     height: 100vh;
-    background-color: blueviolet;
+    background-color: #49007e;
+}
+
+.container-player1{
+    border-radius: 0px 1.5vh 1.5vh 0px;
+    border-right: 0.4vw black solid;
+}
+
+.container-player2{
+    border-radius: 1.5vh 0px 0px 1.5vh;
+    border-left: 0.4vw black solid;
+}
+
+.cooldown{
+    border-radius: 0;
 }

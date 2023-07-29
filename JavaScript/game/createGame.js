@@ -20,11 +20,11 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 let dots = {
     fill: "black",
-    radius: 12,
+    radius: 13,
 
     margin: {
         top: 45,
-        left: 65,
+        left: 70,
     },
 
     amount: {
@@ -111,9 +111,9 @@ function drawLines(){
             ctx.fillStyle = lines.fill;
             ctx.fillRect(
                 dots.matrix.columns[columnsCount].right,
-                dots.matrix.rows[rowsCount].top + dots.radius - dots.radius / 4,
+                dots.matrix.rows[rowsCount].top + dots.radius - dots.radius / 3,
                 dots.matrix.columns[columnsCount + 1].left - dots.matrix.columns[columnsCount].right,
-                dots.radius / 2,
+                dots.radius / 2 + 1,
             );
 
             lines.matrix.horizontals.rows[columnsCount] = {
@@ -125,8 +125,8 @@ function drawLines(){
         }
 
         lines.matrix.horizontals.columns[rowsCount] = {
-            top: dots.matrix.rows[rowsCount].top + dots.radius - dots.radius / 4,
-            bottom: dots.matrix.rows[rowsCount].top + dots.radius - dots.radius / 4 + dots.radius / 2,
+            top: dots.matrix.rows[rowsCount].top + dots.radius - dots.radius / 3,
+            bottom: dots.matrix.rows[rowsCount].top + dots.radius - dots.radius / 3 + dots.radius / 2 + 1,
         };
     }
 
@@ -136,15 +136,15 @@ function drawLines(){
         for(let columnsCount = 0; columnsCount < dots.amount.columns; columnsCount++){
             ctx.fillStyle = lines.fill;
             ctx.fillRect(
-                dots.matrix.columns[columnsCount].left + dots.radius - dots.radius / 4,
+                dots.matrix.columns[columnsCount].left + dots.radius - dots.radius / 3,
                 dots.matrix.rows[rowsCount].bottom,
-                dots.radius / 2,
+                dots.radius / 2 + 1,
                 dots.matrix.rows[rowsCount + 1].top - dots.matrix.rows[rowsCount].bottom,
             );
 
             lines.matrix.verticals.rows[columnsCount] = {
-                right: dots.matrix.columns[columnsCount].left + dots.radius - dots.radius / 4 + dots.radius / 2,
-                left: dots.matrix.columns[columnsCount].left + dots.radius - dots.radius / 4,
+                right: dots.matrix.columns[columnsCount].left + dots.radius - dots.radius / 3 + dots.radius / 2 + 1,
+                left: dots.matrix.columns[columnsCount].left + dots.radius - dots.radius / 3,
             };
 
             lines.matrix.verticals.isClicked[rowsCount][columnsCount] = false;
