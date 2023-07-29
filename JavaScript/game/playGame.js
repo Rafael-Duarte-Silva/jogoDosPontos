@@ -11,8 +11,8 @@ function startGame(player1Name, player2Name){
     let player2 = new Player(player2Name, "rgb(0, 42, 255)");
     
     let playerCurrent = player1;
-    let timeout = 5000;
-    let cooldown = timeout / 30;
+    let timeout = 5000 / 30;
+    let cooldown = timeout;
 
     let interval = 1000 / 30;
     
