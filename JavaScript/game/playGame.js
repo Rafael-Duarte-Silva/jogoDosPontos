@@ -1,14 +1,21 @@
 function startGame(player1Name, player2Name){
     class Player{
-        constructor(id, color){
+        constructor(id, name, color){
             this.id = id;
-            this.initial = id[0].toUpperCase();
+            this.name = name;
+            this.initial = name[0].toUpperCase();
             this.color = color;
+
+            this.innerText();
+        }
+
+        innerText(){
+            document.getElementsByClassName("playerName")[this.id].innerText = this.name;
         }
     }
     
-    let player1 = new Player(player1Name, "rgb(223, 57, 57)");
-    let player2 = new Player(player2Name, "rgb(0, 42, 255)");
+    let player1 = new Player(0, player1Name, "rgb(223, 57, 57)");
+    let player2 = new Player(1, player2Name, "rgb(0, 42, 255)");
     
     let playerCurrent = player1;
     let timeout = 5000 / 30;

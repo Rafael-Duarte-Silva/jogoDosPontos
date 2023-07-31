@@ -35,8 +35,20 @@
     flex-direction: column;
 }
 
+.descripition{
+    width: 32vw;
+    margin: 0px;
+    margin-bottom: 4vh;
+
+    font-size: 2.1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: white;
+    
+    text-align: center;
+}
+
 #player1{
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
 }
 
 .inputPlayers{

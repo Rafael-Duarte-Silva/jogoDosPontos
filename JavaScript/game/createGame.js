@@ -1,17 +1,3 @@
-//Talvez mudar nome dos elementos da matrix (x e y).
-//Talvez mudar o local da variavel distanceBetweenDots.
-//Melhorar o codigo do arquivo mouse-listerner.js.
-//Melhorar se a linha está preenchida.
-//Trocar rowsCount e columnsCount por columns e rows.
-//Atualizar os fills reacts com o left, right, top e bottom dos elementos lines.
-//Quarda alguns valores/conta para evitar repetir processos.
-//Melhorar a conta que calcula a posição das letras.
-//Adicionar width as linhas.
-//Fazer player 1 e player 2. Eles poderam colocar seus nomes e a primeira letra(inicial do nome) será usado para preencher os quadrados.
-
-
-//ver os videos sobre flex e grid e quando usar div, section e tec.
-
 const canvas = document.getElementsByClassName("game")[0];
 let ctx = canvas.getContext('2d');
 

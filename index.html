@@ -21,17 +21,22 @@
                 autocomplete="off"
                 spellcheck="false"
                 >
+                    <h2 class="descripition">A inicial do seu nome será usada no jogo.</h2>
                     <label for="player1" class="labelPlayers">Jogador 1</label>
-                    <input type="text" class="inputPlayers" id="player1" name="player1" placeholder="Name">
+                    <input type="text" class="inputPlayers" id="player1" name="player1" placeholder="Nome">
                     <label for="player2" class="labelPlayers">Jogador 2</label>
-                    <input type="text" class="inputPlayers" id="player2" name="player2" placeholder="Name">
+                    <input type="text" class="inputPlayers" id="player2" name="player2" placeholder="Nome">
                     <input type="submit" class="btn-play" value="Jogar">
                 </form>
             </div>
         </div>
 
         <aside class="container-players container-player1">
-            <progress class="cooldown" value="32" max="100"> 32% </progress>
+            <div class="centralize-playerProfile">
+                <div class="playerProfile"></div>
+                <h1 class="playerName">Nome</h1>
+                <progress class="cooldown" value="32" max="100"> 32% </progress>
+            </div>  
         </aside>
 
         <div class="container-game">
@@ -39,7 +44,11 @@
         </div>
         
         <aside class="container-players container-player2">
-            <progress class="cooldown" value="32" max="100"> 32% </progress>      
+            <div class="centralize-playerProfile">
+                <div class="playerProfile"></div>
+                <h1 class="playerName">Nome</h1>
+                <progress class="cooldown" value="32" max="100"> 32% </progress>
+            </div> 
         </aside>
     </main>
 
