@@ -51,6 +51,14 @@
     margin-bottom: 5vh;
 }
 
+.labelPlayers{
+    font-size: 2em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: white;
+
+    margin-bottom: 1vh;
+}
+
 .inputPlayers{
     text-align: center;
     width: 20vw;
@@ -60,14 +68,6 @@
     border-radius: 1.5vh;
     border: 0.6vh rgb(59, 39, 46) solid;
     background-color: rgb(250, 228, 252);
-}
-
-.labelPlayers{
-    font-size: 2em;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: white;
-
-    margin-bottom: 1vh;
 }
 
 .btn-play{

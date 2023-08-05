@@ -22,32 +22,57 @@
                 spellcheck="false"
                 >
                     <h2 class="descripition">A inicial do seu nome será usada no jogo.</h2>
+
                     <label for="player1" class="labelPlayers">Jogador 1</label>
-                    <input type="text" class="inputPlayers" id="player1" name="player1" placeholder="Nome">
+                    <input
+                    type="text"
+                    class="inputPlayers"
+                    id="player1"
+                    name="player1"
+                    placeholder="Nome"
+                    maxlength="12"
+                    pattern="[a-zA-Z\s\d]*"
+                    required
+                    title="Coloque um nome"
+                    autofocus
+                    >
+
                     <label for="player2" class="labelPlayers">Jogador 2</label>
-                    <input type="text" class="inputPlayers" id="player2" name="player2" placeholder="Nome">
+                    <input
+                    type="text"
+                    class="inputPlayers"
+                    id="player2"
+                    name="player2"
+                    placeholder="Nome"
+                    maxlength="12"
+                    pattern="[a-zA-Z\s\d]*"
+                    required
+                    title="Coloque um nome"
+                    >
+
                     <input type="submit" class="btn-play" value="Jogar">
                 </form>
             </div>
         </div>
 
-        <aside class="container-players container-player1">
+        <aside class="container-players container-player1 active">
             <div class="centralize-playerProfile">
                 <div class="playerProfile"></div>
-                <h1 class="playerName">Nome</h1>
-                <progress class="cooldown" value="32" max="100"> 32% </progress>
+                <h1 class="playerName player1">Nome</h1>
+                <progress class="cooldown" value="100" max="100">100%</progress>
             </div>  
         </aside>
 
         <div class="container-game">
+            <h1 class="scoreboard">0 vs 0</h1>
             <canvas class="game"></canvas>
         </div>
         
         <aside class="container-players container-player2">
             <div class="centralize-playerProfile">
                 <div class="playerProfile"></div>
-                <h1 class="playerName">Nome</h1>
-                <progress class="cooldown" value="32" max="100"> 32% </progress>
+                <h1 class="playerName player2">Nome</h1>
+                <progress class="cooldown" value="100" max="100">100%</progress>
             </div> 
         </aside>
     </main>

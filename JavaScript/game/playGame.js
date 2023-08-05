@@ -18,10 +18,12 @@ function startGame(player1Name, player2Name){
     let player2 = new Player(1, player2Name, "rgb(0, 42, 255)");
     
     let playerCurrent = player1;
-    let timeout = 5000 / 30;
+    let timeout = 15000;
     let cooldown = timeout;
 
-    let interval = 1000 / 30;
+    let interval = 1000 / 100;
+    let onePercent = timeout / 100;
+    let percentage = 0;
     
     setInterval(() => {
         if(cooldown <= 0){
@@ -35,49 +37,58 @@ function startGame(player1Name, player2Name){
                 playerCurrent = player1;
             }
 
+            document.getElementsByClassName("container-players")[player1.id].classList.toggle("active");
+            document.getElementsByClassName("container-players")[player2.id].classList.toggle("active");
+
             cooldown = timeout;
         }
 
-        cooldown --;
+        document.getElementsByClassName("cooldown")[playerCurrent.id].setAttribute("value", percentage);
+        document.getElementsByClassName("cooldown")[playerCurrent.id].innerText = percentage + "%";
+        
+        cooldown -= interval;
+        percentage = cooldown / onePercent;
     }, interval);
     
     canvas.addEventListener("mousedown", (e) => {
         console.log("x: " + e.offsetX);
         console.log("y: " + e.offsetY);
 
-        if(checkClickOnLines(
-            e,
-            {
-                first: dots.amount.rows,
-                second: lines.amount.horizontals,
-            },
-            lines.matrix.horizontals,
-            lines.matrix.verticals,
-            "horizontal",
-            drawHorizontalsLines,
-            playerCurrent.color,
-            playerCurrent.initial
-        )
+        if(
+            checkClickOnLines({
+                e: e,
+                repeat: {
+                    first: dots.amount.rows,
+                    second: lines.amount.horizontals,
+                },
+                obj: lines.matrix.horizontals,
+                obj2: lines.matrix.verticals,
+                direction: "horizontal",
+                draw: drawHorizontalsLines,
+                color: playerCurrent.color,
+                initial: playerCurrent.initial
+            })
         ||
-        checkClickOnLines(
-            e,
-            {
-                first: lines.amount.verticals,
-                second: dots.amount.columns, 
-            },
-            lines.matrix.verticals,
-            lines.matrix.horizontals,
-            "vertical",
-            drawVerticalsLines,
-            playerCurrent.color,
-            playerCurrent.initial
-        )){
+            checkClickOnLines({
+                e: e,
+                repeat: {
+                    first: lines.amount.verticals,
+                    second: dots.amount.columns, 
+                },
+                obj: lines.matrix.verticals,
+                obj2: lines.matrix.horizontals,
+                direction: "vertical",
+                draw: drawVerticalsLines,
+                color: playerCurrent.color,
+                initial: playerCurrent.initial
+            })
+        ){
             cooldown = 0;
         }
         
     });
     
-    function checkClickOnLines(e, repeat, obj, obj2, direction, draw, color, initial){
+    function checkClickOnLines({e, repeat, obj, obj2, direction, draw, color, initial}){
         if(e.buttons === 1){
             for(let rowsCount = 0; rowsCount < repeat.first; rowsCount++){
                 for(let columnsCount = 0; columnsCount < repeat.second; columnsCount++){

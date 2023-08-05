@@ -9,20 +9,38 @@ main{
 
 .container-game{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.scoreboard{
+    margin-block: 0.5vh 0vh;
+    font-size: 2.8em;
+    font-family: 'Noto Serif Vithkuqi', serif;
+    font-weight: 600;
 }
 
 .game{
-    margin-top: 2vh;
     width: 70vw;
-    height: 95vh;
+    height: 90vh;
     background-color: white;
+}
+
+.container-players.active{
+    opacity: 1;
+
+    transition-property: opacity;
+    transition-delay: 0.2s;
+    transition: 0.7s;
 }
 
 .container-players{
     width: 50vw;
     height: 100vh;
     background-color: #49007e;
+
+    opacity: 0.6;
 }
 
 .container-player1{
@@ -63,8 +81,17 @@ main{
     font-weight: 300;
 }
 
-.playerName::first-letter{
-    color: red;
+.playerName.player1::first-letter,
+.playerName.player2::first-letter{
+    text-transform: uppercase;
+}
+
+.playerName.player1::first-letter{
+    color: rgb(223, 57, 57);
+}
+
+.playerName.player2::first-letter{
+    color: rgb(0, 42, 255);
 }
 
 .cooldown{
@@ -81,8 +108,8 @@ main{
 }
 .cooldown::-webkit-progress-value {
     border-radius: 0.8vh 0px 0px 0.8vh;
-    background-color: red;
+    background-color: orange;
 }
 .cooldown::-moz-progress-bar {
-    background-color: red;
+    background-color: orange;
 }
