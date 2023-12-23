@@ -1,3 +1,7 @@
+const canvas = document.getElementsByClassName("game")[0];
+
+resizeCanvastoPointOfView();
+
 function resizeCanvastoPointOfView(){
   const width = canvas.clientWidth;
   const height = canvas.clientHeight;

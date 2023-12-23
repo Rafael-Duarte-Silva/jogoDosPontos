@@ -5,7 +5,7 @@ function validateForm(){
     if(player1Name != "" && player2Name != ""){
         document.getElementsByClassName("container-startScreen")[0].classList.add("active");
 
-        startGame(player1Name, player2Name);
+        runGame(player1Name, player2Name);
         return false;
     }
 }

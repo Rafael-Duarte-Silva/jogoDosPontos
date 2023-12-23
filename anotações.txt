@@ -1,15 +1,16 @@
-//colocar maximo de caracteres nos inputs e restrigir só para caracteres.
-//Usar $ para elementos html.
-
-//Talvez mudar nome dos elementos da matrix (x e y).
-//Talvez mudar o local da variavel distanceBetweenDots.
-//Melhorar o codigo do arquivo playGame.js.
-//Melhorar se a linha está preenchida.
-//Trocar rowsCount e columnsCount por columns e rows.
-//Atualizar os fills reacts com o left, right, top e bottom dos elementos lines.
-//Quarda alguns valores/conta para evitar repetir processos.
-//Melhorar a conta que calcula a posição das letras.
-//Adicionar width as linhas.
-//Fazer player 1 e player 2. Eles poderam colocar seus nomes e a primeira letra(inicial do nome) será usado para preencher os quadrados.
-
 //ver os videos sobre flex e grid e quando usar div, section e tec.
+
+//usar matematica para determinar quando o jogo acabou
+//cometar o codigo com variaveis
+//reever nomenclaturas e etc
+//arruma o amount de columns e rows que parecem estar trocados
+//arruma o css (acho que o flex ta interferindo como funfa o tamanho dos coisas)
+
+
+//centralizar a letra
+//explicar a contas das posicoes de lines e dots
+//redesenhar os dots para a linha ficar em baixo
+//fazer quando o jogo acabou e a pontuação de cada player
+//quando um jogador perde a vez o jogo automaticamente sorteara uma linha para ser preenchida
+//raio dos dots, espeçura da linha e etc ser de acordo com a tela (responsiva)
+/fazer um binarysearch

@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi&display=swap');
 
 main{
-    width: 100vw;
-    height: 100vh;
-
     display: flex;
 }
 
 .container-game{
+    width: 185vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: center;
 }
 
 .scoreboard{
@@ -22,8 +21,8 @@ main{
 }
 
 .game{
-    width: 70vw;
-    height: 90vh;
+    width: 50vw;
+    height: 50vw;
     background-color: white;
 }
 

@@ -1,17 +1,10 @@
-const canvas = document.getElementsByClassName("game")[0];
 let ctx = canvas.getContext('2d');
 
-resizeCanvastoPointOfView();
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 let dots = {
     fill: "black",
     radius: 13,
-
-    margin: {
-        top: 45,
-        left: 70,
-    },
 
     amount: {
         columns: 7,
@@ -24,20 +17,18 @@ let dots = {
     },
 }
 
-function calculateDistanceBetweenDots(){
-    return {
-        x: Math.floor(canvas.offsetWidth / dots.amount.columns),
-        y: Math.floor(canvas.offsetHeight / dots.amount.rows),
+drawDots();
+
+function drawDots(){
+    const distanceBetweenDots = {
+        x: Math.floor((canvas.offsetWidth - dots.radius * 2)  / (dots.amount.columns - 1)),
+        y: Math.floor((canvas.offsetHeight -  dots.radius * 2)  / (dots.amount.rows - 1)),
     };
-}
 
-drawDots(calculateDistanceBetweenDots());
-
-function drawDots(distanceBetweenDots){
     console.log(distanceBetweenDots);
 
-    let positionDotsX = dots.margin.left;
-    let positionDotsY = dots.margin.top;
+    let positionDotsX = dots.radius;
+    let positionDotsY = dots.radius;
 
     for(let rowsCount = 0; rowsCount < dots.amount.rows; rowsCount++){
         for(let columnsCount = 0; columnsCount < dots.amount.columns; columnsCount++){
@@ -60,26 +51,29 @@ function drawDots(distanceBetweenDots){
         };
 
         positionDotsY += distanceBetweenDots.y;
-        positionDotsX = dots.margin.left;
+        positionDotsX = dots.radius;
     }
 }
 
 let lines = {
     fill: "rgb(153, 153, 153)",
 
-    amount: {
-        verticals: dots.amount.rows - 1,
-        horizontals: dots.amount.columns - 1,
-    },
-
     matrix: {
         verticals: {
+            amount: {
+                rows: dots.amount.rows - 1,
+                columns: dots.amount.columns,
+            },
             rows: {},
             columns: {},
             isClicked: new Array(),
         },
 
         horizontals: {
+            amount: {
+                rows: dots.amount.rows,
+                columns: dots.amount.columns - 1,
+            },
             rows: {},
             columns: {},
             isClicked: new Array(),
@@ -87,13 +81,14 @@ let lines = {
     },
 }
 
-drawLines();
+drawLinesVerticals();
+drawLinesHorizontals();
 
-function drawLines(){
-    for(let rowsCount = 0; rowsCount < dots.amount.rows; rowsCount++){
+function drawLinesHorizontals(){
+    for(let rowsCount = 0; rowsCount < lines.matrix.horizontals.amount.rows; rowsCount++){
         lines.matrix.horizontals.isClicked[rowsCount] = new Array();
 
-        for(let columnsCount = 0; columnsCount < lines.amount.horizontals; columnsCount++){
+        for(let columnsCount = 0; columnsCount < lines.matrix.horizontals.amount.columns; columnsCount++){
             ctx.fillStyle = lines.fill;
             ctx.fillRect(
                 dots.matrix.columns[columnsCount].right,
@@ -115,11 +110,13 @@ function drawLines(){
             bottom: dots.matrix.rows[rowsCount].top + dots.radius - dots.radius / 3 + dots.radius / 2 + 1,
         };
     }
+}
 
-    for(let rowsCount = 0; rowsCount < lines.amount.verticals; rowsCount++){
+function drawLinesVerticals(){
+    for(let rowsCount = 0; rowsCount < lines.matrix.verticals.amount.rows; rowsCount++){
         lines.matrix.verticals.isClicked[rowsCount] = new Array();
 
-        for(let columnsCount = 0; columnsCount < dots.amount.columns; columnsCount++){
+        for(let columnsCount = 0; columnsCount < lines.matrix.verticals.amount.columns; columnsCount++){
             ctx.fillStyle = lines.fill;
             ctx.fillRect(
                 dots.matrix.columns[columnsCount].left + dots.radius - dots.radius / 3,
