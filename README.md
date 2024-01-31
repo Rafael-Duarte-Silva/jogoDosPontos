@@ -4,7 +4,7 @@
 O objetivo do jogo é traçar linhas, e o jogador que completar um quadrado ao fechar a última linha ganha um ponto.
 
 * Por enquanto, o jogo só está disponível para partidas locais.
-* Cada jogador tem sua vez de jogar, que é passada quando um jogador realiza uma jogada ou quando seu tempo de jogo se esgota.
+* Cada jogador tem sua vez de jogar, que é passada quando um jogador realiza uma jogada ou quando seu tempo do jogador se esgota.
 * Se o tempo do jogador se esgotar, o jogo realizará automaticamente um sorteio para determinar a jogada a ser efetuada.
 
 
