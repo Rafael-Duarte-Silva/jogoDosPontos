@@ -10,6 +10,4 @@ O objetivo do jogo é traçar linhas, e o jogador que completar um quadrado ao f
 
 ## Demonstração
 
-
-
-
+![jogoDosPontos](https://github.com/Rafael-Duarte-Silva/jogoDosPontos/assets/38193394/2dceb11d-74b4-475a-952e-a552e8e67ecb)
