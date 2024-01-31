@@ -1,5 +1,5 @@
 
-# jogo dos Pontos
+# Jogo dos Pontos
 
 O objetivo do jogo é traçar linhas, e o jogador que completar um quadrado ao fechar a última linha ganha um ponto.
 
