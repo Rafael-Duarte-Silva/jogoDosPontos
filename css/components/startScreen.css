@@ -1,73 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap');
 
-.container-startScreen{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-startScreen.active{
+.startScreen.active{
     display: none;
 }
 
-.startScreen,
+.startScreen{
+    position: fixed;
+
+    width: 40vw;
+    height: 80vh;
+    padding-inline: 4vh;
+
+    border-radius: 21px;
+    border: 4px solid #D1D8E0;
+    background: #FCFCFC;
+}
+
 .form{
+    height: 80vh;
     display: flex;
+    flex-direction: column;
+
     align-items: center;
     justify-content: center;
 }
 
-.startScreen{
-    width: 40vw;
-    height: 70vh;
+.centralize-inputs{
+    width: max-content;
+    height: max-content;
 
-    background-color: #49007e;
-    opacity: 0.99;
-
-    border-radius: 1.5vh;
-    border: 0.7vh black solid;
-}
-
-.form{
+    display: flex;
     flex-direction: column;
 }
 
 .descripition{
-    width: 32vw;
     margin: 0px;
-    margin-bottom: 4vh;
+    margin-bottom: 7vh;
 
-    font-size: 2.1em;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: white;
-    
-    text-align: center;
+    color: #3367A3;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    align-self: flex-start;
 }
 
 #player1{
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
 }
 
-.labelPlayers{
-    font-size: 2em;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: white;
-
+#player2{
     margin-bottom: 1vh;
 }
 
+.labelPlayers{
+    color: #3367A3;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+
+    margin-bottom: 1vh;
+    margin-left: 0.2vw;
+}
+
 .inputPlayers{
-    text-align: center;
     width: 20vw;
     height: 5vh;
-    font-size: 2em;
+    padding-left: 0.3vw;
 
-    border-radius: 1.5vh;
-    border: 0.6vh rgb(59, 39, 46) solid;
-    background-color: rgb(250, 228, 252);
+    color: #393939;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    border-radius: 7px;
+    border: 2px solid #3367A3;
+    background: #F2F0F0;
+}
+
+::-webkit-input-placeholder{
+    color: #989797;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+:-ms-input-placeholder{
+    color: #989797;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+::placeholder{
+    color: #989797;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .btn-play{
@@ -75,32 +115,12 @@
     height: 8vh;
     margin-top: 5vh;
 
-    border-radius: 1.5vh;
+    border-radius: 7px;
+    background: #FF8A00;
     border: 0;
 
     box-sizing: content-box;
     font-size: 2.5em;
     font-family: 'Noto Sans JP', sans-serif;
-
-    background-color: #fc370c;
-    
-    -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
-
     color: white;
-}
-
-::-webkit-input-placeholder{
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 0.8em;
-}
-
-:-ms-input-placeholder{
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 0.8em;
-}
-::placeholder{
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 0.8em;
 }

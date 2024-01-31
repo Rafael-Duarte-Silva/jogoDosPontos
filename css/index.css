@@ -1,16 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi&display=swap');
 
-main{
+body{
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='67' height='67' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(51, 103, 163,1)'/%3E%3Cpath d='M0 28.5a 8.5-8.5 0 0 0 8.5-8.5a 11.5-11.5 0 0 1 11.5-11.5v3a-8.5 8.5 0 0 0-8.5 8.5a-11.5 11.5 0 0 1-11.5 11.5zM0 68.5a 8.5-8.5 0 0 0 8.5-8.5a 11.5-11.5 0 0 1 11.5-11.5v3a-8.5 8.5 0 0 0-8.5 8.5a-11.5 11.5 0 0 1-11.5 11.5z' fill='rgba(255, 138, 0,1)'/%3E%3Cpath d='M20 28a 8-8 0 0 0 8-8a 12-12 0 0 1 12-12v4a-8 8 0 0 0-8 8a-12 12 0 0 1-12 12z' fill='rgba(252, 252, 252,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E");
+
+    width: 100vw;
+    height: 100vh;
+
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.active{
+    visibility: hidden;
+}
+
+main{
+    visibility: visible;
+    
+    width: 85vw;
+    height: 92vh;
+    display: flex;
+    background-color: #FCFCFC;
+    border-radius: 21px;
 }
 
 .container-game{
-    width: 185vw;
-    height: 100vh;
+    width: 70vw;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .scoreboard{
@@ -21,9 +41,9 @@ main{
 }
 
 .game{
-    width: 50vw;
-    height: 50vw;
-    background-color: white;
+    margin-top: 0.5vw;
+    width: 42vw;
+    height: 42vw;
 }
 
 .container-players.active{
@@ -35,21 +55,17 @@ main{
 }
 
 .container-players{
-    width: 50vw;
-    height: 100vh;
-    background-color: #49007e;
+    width: 20vw;
+    height: 15vh;
 
     opacity: 0.6;
-}
 
-.container-player1{
-    border-radius: 0px 1.5vh 1.5vh 0px;
-    border-right: 0.4vw black solid;
+    background-color: #FF8A00;
+    border-radius: 21px 0px;
 }
 
 .container-player2{
-    border-radius: 1.5vh 0px 0px 1.5vh;
-    border-left: 0.4vw black solid;
+    align-self: flex-end;
 }
 
 .centralize-playerProfile{
@@ -61,23 +77,16 @@ main{
     align-items: center;
 }
 
-.playerProfile{
-    margin-top: 2vh;
-    width: 27vh;
-    height: 27vh;
-    background-color: aliceblue;
-
-    border-radius: 50%;
-}
-
 .playerName{
     margin: 0px;
     margin-top: 2.5vh;
 
-    color: white;
-    font-family: 'Noto Serif Vithkuqi', serif;
-    font-size: 2em;
-    font-weight: 300;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .playerName.player1::first-letter,
@@ -95,20 +104,19 @@ main{
 
 .cooldown{
     width: 14vw;
-    height: 3.5vh;
-    border-radius: 0.8vh;
+    height: 2.8vh;
 
-    border: 0.32vh black solid;
+    margin-top: 2vh;
+
+    border: 0;
 }
 
 .cooldown::-webkit-progress-bar {
-    border-radius: 0.8vh;
     background-color: whitesmoke;
 }
 .cooldown::-webkit-progress-value {
-    border-radius: 0.8vh 0px 0px 0.8vh;
-    background-color: orange;
+    background-color: #16B242;
 }
 .cooldown::-moz-progress-bar {
-    background-color: orange;
+    background-color: #16B242;
 }

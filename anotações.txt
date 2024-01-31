@@ -13,4 +13,3 @@
 //fazer quando o jogo acabou e a pontuação de cada player
 //quando um jogador perde a vez o jogo automaticamente sorteara uma linha para ser preenchida
 //raio dos dots, espeçura da linha e etc ser de acordo com a tela (responsiva)
-/fazer um binarysearch

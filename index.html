@@ -10,57 +10,56 @@
     <link rel="stylesheet" href="css/components/startScreen.css">
 </head>
 <body>
-    <main>
-        <div class="container-startScreen">
-            <div class="startScreen">
-                <form 
-                name="form" 
-                class="form" 
-                action="" 
-                onsubmit="return validateForm()"
-                autocomplete="off"
-                spellcheck="false"
+    <div class="startScreen">
+        <form 
+        name="form"
+        class="form"
+        action=""
+        onsubmit="return validateForm()"
+        autocomplete="off"
+        spellcheck="false"
+        >
+            <h2 class="descripition">A inicial dos nomes inseridos será usada no jogo</h2>
+
+            <div class="centralize-inputs">
+                <label for="player1" class="labelPlayers">Jogador 1</label>
+                <input
+                type="text"
+                class="inputPlayers"
+                id="player1"
+                name="player1"
+                placeholder="Nome..."
+                maxlength="12"
+                pattern="[a-zA-Z\s\d]*"
+                required
+                title="Coloque um nome"
+                autofocus
                 >
-                    <h2 class="descripition">A inicial do seu nome será usada no jogo.</h2>
 
-                    <label for="player1" class="labelPlayers">Jogador 1</label>
-                    <input
-                    type="text"
-                    class="inputPlayers"
-                    id="player1"
-                    name="player1"
-                    placeholder="Nome"
-                    maxlength="12"
-                    pattern="[a-zA-Z\s\d]*"
-                    required
-                    title="Coloque um nome"
-                    autofocus
-                    >
-
-                    <label for="player2" class="labelPlayers">Jogador 2</label>
-                    <input
-                    type="text"
-                    class="inputPlayers"
-                    id="player2"
-                    name="player2"
-                    placeholder="Nome"
-                    maxlength="12"
-                    pattern="[a-zA-Z\s\d]*"
-                    required
-                    title="Coloque um nome"
-                    >
-
-                    <input type="submit" class="btn-play" value="Jogar">
-                </form>
+                <label for="player2" class="labelPlayers">Jogador 2</label>
+                <input
+                type="text"
+                class="inputPlayers"
+                id="player2"
+                name="player2"
+                placeholder="Nome..."
+                maxlength="12"
+                pattern="[a-zA-Z\s\d]*"
+                required
+                title="Coloque um nome"
+                >
             </div>
-        </div>
 
+            <input type="submit" class="btn-play" value="Jogar">
+        </form>
+    </div>
+
+    <main class="active">
         <aside class="container-players container-player1 active">
             <div class="centralize-playerProfile">
-                <div class="playerProfile"></div>
                 <h1 class="playerName player1">Nome</h1>
-                <progress class="cooldown" value="100" max="100">100%</progress>
-            </div>  
+                <progress class="cooldown player1" value="100" max="100">100%</progress>
+            </div>
         </aside>
 
         <section class="container-game">
@@ -70,16 +69,17 @@
         
         <aside class="container-players container-player2">
             <div class="centralize-playerProfile">
-                <div class="playerProfile"></div>
                 <h1 class="playerName player2">Nome</h1>
-                <progress class="cooldown" value="100" max="100">100%</progress>
-            </div> 
+                <progress class="cooldown player2" value="100" max="100">100%</progress>
+            </div>
         </aside>
     </main>
 
     <script src="JavaScript/startScreen.js"></script>
     <script src="JavaScript/game/resizeCanvas.js"></script>
-    <script src="JavaScript/game/createGame.js"></script>
+    <script src="JavaScript/game/createGame/createDots.js"></script>
+    <script src="JavaScript/game/createGame/createLines.js"></script>
+    <script src="JavaScript/game/createGame/create.js"></script>
     <script src="JavaScript/game/runGame.js"></script>
 </body>
 </html>
