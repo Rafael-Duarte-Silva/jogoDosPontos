@@ -1,4 +1,6 @@
-function validateForm(){
+function validateForm(event){
+    event.preventdefault();
+    
     const player1Name = document.forms["form"]["player1"].value;
     const player2Name = document.forms["form"]["player2"].value;
 
@@ -7,6 +9,5 @@ function validateForm(){
         document.getElementsByTagName("main")[0].classList.toggle("active");
 
         runGame(player1Name, player2Name);
-        return false;
     }
 }
