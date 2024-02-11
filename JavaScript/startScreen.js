@@ -1,5 +1,5 @@
 function validateForm(event){
-    event.preventdefault();
+    event.preventDefault();
     
     const player1Name = document.forms["form"]["player1"].value;
     const player2Name = document.forms["form"]["player2"].value;
